@@ -1,0 +1,134 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #dfdfff;
+    text-align: center;
+}
+
+h1{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.purple{
+    color: #20063e;
+}
+
+.que{
+    width: 120px;
+    height: 120px;
+    background-color: #dbc8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    border-radius: 50%;
+    /* animation: oneSec 3s forwards; */
+}
+
+.que:hover{
+    cursor: pointer;
+}
+
+.opt{
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    background-color: #a38ec4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.opt:hover{
+    cursor: pointer;
+    animation: 0.3s shin;
+    animation-fill-mode: forwards;
+}
+
+.optionDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.questionDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quetxt{
+    font-size: 50px;
+    font-weight: 800;
+    user-select: none;
+}
+
+.quetxt:hover{
+    cursor: pointer;
+}
+
+.opttxt{
+    font-size: 42px;
+    font-weight: 400;
+    user-select: none;
+}
+
+.opttxt:hover{
+    cursor: pointer;
+}
+
+.red{
+    background-color: #fa3131;
+}
+
+.scoreMsg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.restartBtn{
+    text-decoration: none;
+    border: 1px solid #20063e;
+    background-color: aquamarine;
+    font-size: 15px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 5%;
+}
+
+.startBtn{
+    margin: 10px 2px 10px 2px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #20063e;
+    border-radius: 10%;
+    padding: 2px 5px 2px 5px;
+    color: #20063e;
+}
+
+.hide{
+    display: none;
+}
+
+/* for boxShadow */
+@keyframes shin {
+
+    from{
+        box-shadow: none;
+    }
+
+    to{
+        box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.2);;
+    }
+
+}
+
+.clicked{
+    transform: scale(1.05);
+}
