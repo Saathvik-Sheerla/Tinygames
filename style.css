@@ -1,40 +1,44 @@
 body{
+    text-align: center;
+}
+
+.main{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
 #onesec{
-    text-decoration: none;
-    
-    background-image: url(onesec-sample.png);
+    background-image: url(onesec-sample3.png);
     background-size: cover;
     margin: 3rem;
-    height: 125px;
-    width: 125px;
+    height: 200px;
+    width: 200px;
     border-radius: 5%;
     padding-right: 15px;
 }
 
 #flashn{
-    text-decoration: none;
-    
-    background-image: url(flashn-sample.png);
+    background-image: url(flashn-sample3.png);
     background-size: cover;
     margin: 3rem;
-    height: 125px;
-    width: 200px;
+    height: 210px;
+    width: 210px;
     border-radius: 5%;
 }
 
 
 /* .footer{
+    position: absolute;
     height: 20px;
     width: 100%;
     bottom: 0%;
     background-color: #ddd;
     text-align: right;
 } */
+
+
 
 

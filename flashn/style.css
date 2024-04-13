@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    background-color: #e8e1fe;
 }
 
 .footer{
@@ -8,6 +9,17 @@ body{
     bottom: 0%;
     background-color: #ddd;
     text-align: right;
+}
+
+.startbtn{
+    margin: 10px 2px 10px 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #20063e;
+    border-radius: 10%;
+    padding: 2px 8px 2px 8px;
+    color: #20063e;
 }
 
 .btn{
