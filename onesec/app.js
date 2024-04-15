@@ -31,6 +31,7 @@ document.addEventListener("keypress",()=>{
     if(started === true && nextStart === false){
         startBtn.classList.add("hide");
         setTimeout(next,100);
+        scoreMsg.innerText = `score: ${points}`;
         nextStart = true;
     }
 });
@@ -44,6 +45,7 @@ startBtn.addEventListener("click",()=>{
     if(started === true && nextStart === false){
         startBtn.classList.add("hide");
         setTimeout(next,100);
+        scoreMsg.innerText = `score: ${points}`;
         nextStart = true;
     }
 });
