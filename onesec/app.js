@@ -31,7 +31,6 @@ document.addEventListener("keypress",()=>{
     if(started === true && nextStart === false){
         startBtn.classList.add("hide");
         setTimeout(next,100);
-        scoreMsg.innerText = `score: ${points}`;
         nextStart = true;
     }
 });
@@ -45,7 +44,6 @@ startBtn.addEventListener("click",()=>{
     if(started === true && nextStart === false){
         startBtn.classList.add("hide");
         setTimeout(next,100);
-        scoreMsg.innerText = `score: ${points}`;
         nextStart = true;
     }
 });
@@ -63,8 +61,8 @@ function next(){
 
     // oneSec();
     startTime = Date.now();
-    intervalId = setInterval(gameOver,1100);
-    
+    intervalId = setInterval(gameOver,3100);
+    scoreMsg.innerText = `score: ${points}`;
 }
 
 //random numbers
@@ -129,7 +127,7 @@ function otherIndex(num){
 
 
 function oneSec(){
-    intervalId = setInterval(gameOver,1100);
+    intervalId = setInterval(gameOver,3100);
     return intervalId;
 }
 
@@ -139,7 +137,7 @@ function getRemainingTime() {
     if (startTime) {
         let currentTime = Date.now();
         let elapsedTime = currentTime - startTime;
-        let remainingTime = 1100 - elapsedTime; // Total interval time is 5000ms (5 seconds)
+        let remainingTime = 3100 - elapsedTime; // Total interval time is 5000ms (5 seconds)
         return remainingTime;
     }
     return 0; // Default to 0 if startTime is not set
