@@ -61,7 +61,7 @@ function next(){
 
     // oneSec();
     startTime = Date.now();
-    intervalId = setInterval(gameOver,3100);
+    intervalId = setInterval(gameOver,1000);
     scoreMsg.innerText = `score: ${points}`;
 }
 
@@ -127,7 +127,7 @@ function otherIndex(num){
 
 
 function oneSec(){
-    intervalId = setInterval(gameOver,3100);
+    intervalId = setInterval(gameOver,1000);
     return intervalId;
 }
 
@@ -137,7 +137,7 @@ function getRemainingTime() {
     if (startTime) {
         let currentTime = Date.now();
         let elapsedTime = currentTime - startTime;
-        let remainingTime = 3100 - elapsedTime; // Total interval time is 5000ms (5 seconds)
+        let remainingTime = 1000 - elapsedTime; // Total interval time is 5000ms (5 seconds)
         return remainingTime;
     }
     return 0; // Default to 0 if startTime is not set
