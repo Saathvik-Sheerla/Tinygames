@@ -31,7 +31,7 @@ srtbtn.addEventListener("click",()=>{
             askUser(counter++);
             h2.innerHTML = `Game started, Player Name: <i>${players[counter-1]}<i>`;
             removeStartbtn();
-            setTimeout(next,1000);
+            setTimeout(next,800);
             }
 });
 
@@ -117,7 +117,7 @@ function checkAns(idx){
         setTimeout(()=>{
             body.classList.remove("errorRed");
         },800);
-        h2.innerHTML = `Game Over! <br> ${players[0]}'s score is <b>${score}<b> <br>click start to play again`;
+        h2.innerHTML = `Game Over! <br> ${players[counter-1]}'s score is <b>${score}<b> <br>click start to play again`;
         reset();
         srtbtn.classList.remove("classbtnremove");
 
