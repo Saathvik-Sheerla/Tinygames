@@ -29,6 +29,19 @@ body{
     border-radius: 5%;
 }
 
+#sumerrr{
+    background-image: url(abacus-image.webp);
+    background-size: cover;
+    margin: 3rem;
+    height: 210px;
+    width: 210px;
+    border-radius: 5%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color:  #20063e;
+}
+
 
 /* .footer{
     position: absolute;
