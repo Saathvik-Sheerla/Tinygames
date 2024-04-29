@@ -54,6 +54,7 @@ startBtn.addEventListener("click",()=>{
 function next(){
     let numbers = randomNumbers();
     quetxt.innerHTML = numbers.queTxtString;  
+    answerIn.value = '';
 
     // sumerrr();
     startTime = Date.now();
@@ -74,8 +75,8 @@ function randomNumbers(){
 
 //answerCheck   
     saveBtn.addEventListener("click",()=>{
-        if(started === true){ console.log("pressed");
-            if(isCorrect()){ console.log("yes");
+        if(started === true){
+            if(isCorrect()){
                 points += Math.round((getRemainingTime() / 100));
                 clearInterval(intervalId);
                 setTimeout(next,500);

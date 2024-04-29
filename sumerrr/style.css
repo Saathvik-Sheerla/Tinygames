@@ -2,7 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #e8e1fe;
+    background-color: #FFFBDA;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ h1{
 .que{
     width: 15rem;
     height: 4rem;
-    background-color: #dbc8f8;
+    background-color: #FFFBDA;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +83,7 @@ h1{
 
 .restartBtn{
     text-decoration: none;
-    border: 1px solid #20063e;
+    border: 1px solid #FFEC9E;
     background-color: aquamarine;
     font-size: 15px;
     margin: 20px 2px 0 2px;
@@ -96,10 +96,31 @@ h1{
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    border: 1px solid #20063e;
+    border: 1px solid #ED9455;
+    background-color: #FFFBDA;
     border-radius: 10%;
     padding: 2px 8px 2px 8px;
-    color: #20063e;
+    color: #ED9455;
+}
+
+.startBtn:hover{
+    border: 1.5px dotted #ED9455;
+    cursor: pointer;
+}
+
+.saveBtn{
+    background-color: #FFFBDA;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #ED9455;
+    border-radius: 10%;
+    padding: 2px 8px 2px 8px;
+    color: #ED9455;
+}
+
+.saveBtn:hover{
+    border: 1.5px dotted #ED9455;
+    cursor: pointer;
 }
 
 .hide{
