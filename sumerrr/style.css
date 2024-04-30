@@ -105,7 +105,7 @@ h1{
 }
 
 .startBtn:hover{
-    border: 1.5px dotted #ED9455;
+    border:  dotted #ED9455;
     cursor: pointer;
 }
 
@@ -120,7 +120,7 @@ h1{
 }
 
 .saveBtn:hover{
-    border: 1.5px dotted #ED9455;
+    border:  dotted #ED9455;
     cursor: pointer;
 }
 

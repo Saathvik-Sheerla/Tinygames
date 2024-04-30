@@ -17,6 +17,7 @@ let started = false;
 let points;
 let pointsArr = [0];
 let counter = 0;
+let totalScore = 0;
 
 let startTime;
 let intervalId;
@@ -30,7 +31,6 @@ document.addEventListener("keypress",()=>{
     started = true;
     points = 0;
     Body.classList.remove("red");
-    scoreMsg.innerText = "";
     if(started === true && nextStart === false){
         startBtn.classList.add("hide");
         setTimeout(next,500);
@@ -44,11 +44,11 @@ startBtn.addEventListener("click",()=>{
     started = true;
     points = 0;
     Body.classList.remove("red");
-    scoreMsg.innerText = "";
     if(started === true && nextStart === false){
         startBtn.classList.add("hide");
+        answerIn.focus();
         setTimeout(next,500);
-        nextStart = true;
+        nextStart = true;             
     }
 });
 
@@ -58,24 +58,28 @@ function next(){
     let numbers = randomNumbers();
     quetxt.innerHTML = numbers.queTxtString;  
     answerIn.value = '';
+    answerIn.focus();
 
     // sumerrr();
     startTime = Date.now();
     intervalId = setInterval(gameOver,10000);
-    scoreMsg.textContent = `score: ${pointsArr[counter++]}`;
+    totalScore = pointsArr.reduce((acc, curr)=> acc+curr,0);
+    scoreMsg.textContent = `score: ${totalScore}`;
 }
 
 
 //answerCheck   
 saveBtn.addEventListener("click",()=>{
     if(started === true){
-        if(isCorrect()){
-            points = Math.round((getRemainingTime() / 100));
-            pointsArr.push(points);
-            clearInterval(intervalId);
-            setTimeout(next,500);
-        } else{
-            gameOver(); // complete this function
+        if(answerIn.value != ''){
+            if(isCorrect()){
+                points = Math.round((getRemainingTime() / 100));
+                pointsArr.push(points);
+                clearInterval(intervalId);
+                setTimeout(next,300);
+            } else{
+                gameOver(); // complete this function
+            }
         }
     }
 });
@@ -104,7 +108,7 @@ function gameOver(){
     Body.classList.add("red");
     started = false;
     nextStart = false;
-    let totalScore = pointsArr.reduce((acc, curr)=> acc+curr,0);
+    answerIn.blur();
     scoreMsg.textContent = `Game over ,Your score is ${totalScore}`;
     restartBtn.classList.remove("hide");
 }
@@ -121,7 +125,7 @@ function getRemainingTime() {
     if (startTime) {
         let currentTime = Date.now();
         let elapsedTime = currentTime - startTime;
-        let remainingTime = 10000 - elapsedTime; // Total interval time is 5000ms (5 seconds)
+        let remainingTime = 10000 - elapsedTime; 
         return remainingTime;
     }
     return 0; // Default to 0 if startTime is not set
