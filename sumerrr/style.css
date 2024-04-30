@@ -17,8 +17,8 @@ h1{
     margin-bottom: 30px;
 }
 
-.purple{
-    color: #20063e;
+.orange{
+    color: #ED9455;
 }
 
 .que{
@@ -44,9 +44,10 @@ h1{
 }
 
 .answerInput{
-    width: 8rem;
+    width: 8.5rem;
     height: 1.1rem;
     margin: 2rem 0 2rem 0;
+    background-color: #FFFBDA;
 }
 
 .saveBtn{
@@ -122,6 +123,7 @@ h1{
     border: 1.5px dotted #ED9455;
     cursor: pointer;
 }
+
 
 .hide{
     display: none;

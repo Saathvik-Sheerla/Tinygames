@@ -14,7 +14,10 @@ let startBtn = document.querySelector(".startBtn");
 let restartBtn = document.querySelector(".restartBtn");
 
 let started = false;
-let points = 0;
+let points;
+let pointsArr = [0];
+let counter = 0;
+
 let startTime;
 let intervalId;
 let nextStart = false;
@@ -59,8 +62,24 @@ function next(){
     // sumerrr();
     startTime = Date.now();
     intervalId = setInterval(gameOver,10000);
-    scoreMsg.innerText = `score: ${points}`;
+    scoreMsg.textContent = `score: ${pointsArr[counter++]}`;
 }
+
+
+//answerCheck   
+saveBtn.addEventListener("click",()=>{
+    if(started === true){
+        if(isCorrect()){
+            points = Math.round((getRemainingTime() / 100));
+            pointsArr.push(points);
+            clearInterval(intervalId);
+            setTimeout(next,500);
+        } else{
+            gameOver(); // complete this function
+        }
+    }
+});
+
 
 //random numbers
 function randomNumbers(){
@@ -71,20 +90,6 @@ function randomNumbers(){
 
     return {queTxtString,randomQue};
 }
-
-
-//answerCheck   
-    saveBtn.addEventListener("click",()=>{
-        if(started === true){
-            if(isCorrect()){
-                points += Math.round((getRemainingTime() / 100));
-                clearInterval(intervalId);
-                setTimeout(next,500);
-            } else{
-                gameOver(); // complete this function
-            }
-        }
-    });
 
 
 //to check if player clicked correct option
@@ -99,20 +104,9 @@ function gameOver(){
     Body.classList.add("red");
     started = false;
     nextStart = false;
-    scoreMsg.innerText = `Game over ,Your score is ${points}`;
+    let totalScore = pointsArr.reduce((acc, curr)=> acc+curr,0);
+    scoreMsg.textContent = `Game over ,Your score is ${totalScore}`;
     restartBtn.classList.remove("hide");
-}
-
-
-//otherIdx
-function otherIndex(num){
-    // if(num == 0){
-    //     return 1;
-    // } else{
-    //     return 0;
-    // }
-
-    return num===0?1:0;
 }
 
 
