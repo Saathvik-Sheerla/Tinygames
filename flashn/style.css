@@ -3,6 +3,10 @@ body{
     background-color: #e8e1fe;
 }
 
+.hide{
+    display: none;
+}
+
 .footer{
     height: 20px;
     width: 100%;
@@ -20,6 +24,19 @@ body{
     border-radius: 10%;
     padding: 2px 8px 2px 8px;
     color: #20063e;
+}
+
+.restartBtn{
+    text-decoration: none;
+    margin: 10px 2px 10px 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #20063e;
+    border-radius: 10%;
+    padding: 2px 8px 2px 8px;
+    color: #20063e;
+    background-color: rgb(184, 255, 255);
 }
 
 .btn{
@@ -79,7 +96,6 @@ body{
 .errorRed{
     background-color: red;
 }
-
 
 .classbtnremove{
     display: none;

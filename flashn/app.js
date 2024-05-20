@@ -118,9 +118,8 @@ function checkAns(idx){
             body.classList.remove("errorRed");
         },800);
         h2.innerHTML = `Game Over! <br> ${players[counter-1]}'s score is <b>${score}<b> <br>click start to play again`;
-        reset();
-        srtbtn.classList.remove("classbtnremove");
-
+        // reset();
+        document.querySelector(".restartBtn").classList.remove("hide");
     }
 }
 
